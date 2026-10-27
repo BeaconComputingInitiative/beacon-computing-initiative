@@ -26,8 +26,8 @@ Reviewed: October 26, 2026. Default branch: `master`. Audited commit: `f0a71f1b7
 
 Run locally: `python3 tools/repository_hygiene.py --baseline f0a71f1b7e89a7828a4c9af926042a2e17d564d7` and `sha256sum -c docs/HYGIENE_SHA256SUMS`.
 
-This check is advisory until merged, and it does not become a mandatory branch-protection rule automatically. It cannot prove semantic equivalence, runtime correctness, README accuracy or release readiness. Intentional shared code should be extracted into a common module; deliberate compatibility exceptions require a reviewed policy adjustment.
+This workflow checks pushes and pull requests after integration, and it does not become a mandatory branch-protection rule automatically. It cannot prove semantic equivalence, runtime correctness, README accuracy or release readiness. Intentional shared code should be extracted into a common module; deliberate compatibility exceptions require a reviewed policy adjustment.
 
-## Review limits
+## Extended history audit
 
-The complete non-truncated default-branch tree, available branch names, up to six recent commits, and published release metadata were inspected. Selected README and status/entrypoint contents were also read. Other branch contents, full historical commits, executable dependencies, hardware behavior, secrets, and deep code correctness were not audited. No history, datasets, release assets, runtime paths or existing branches are deleted by this change.
+See [PORTFOLIO_AUDIT.md](PORTFOLIO_AUDIT.md) for the complete branch-history inventory, consolidation decisions and current review limits. The original findings above describe the pre-cleanup snapshot; the portfolio audit and README record the resulting state.
